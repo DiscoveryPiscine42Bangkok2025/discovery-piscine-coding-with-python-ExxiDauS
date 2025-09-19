@@ -1,22 +1,22 @@
 from checkmate import checkmate
 
 def main():
-    # Test Case 1 (from PDF example)
+    # Test Case 1 (Pawn attack)
     board1 = """\
 R...
 .K..
 ..P.
 ....\
 """
-    print("Test 1:")
+    print("Test 1 (Pawn attack):")
     checkmate(board1)
     
-    # Test Case 2 (from PDF example)
+    # Test Case 2 (No attack)
     board2 = """\
 ..
 .K\
 """
-    print("Test 2:")
+    print("Test 2 (No attack):")
     checkmate(board2)
     
     # Test Case 3: Queen attack
@@ -33,8 +33,8 @@ Q...
     board4 = """\
 B...
 ....
-....
-...K\
+..K.
+....\
 """
     print("Test 4 (Bishop attack):")
     checkmate(board4)
@@ -58,5 +58,14 @@ P...
 """
     print("Test 6 (Pawn attack):")
     checkmate(board6)
+
+    board7 = """\
+....
+.K..
+....
+.R..
+"""
+    print("Test 7 (Rook attack):")
+    checkmate(board7)
 
 main()
